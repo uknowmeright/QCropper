@@ -14,14 +14,14 @@ class Toolbar: UIView {
         return button
     }()
 
-    lazy var resetButton: UIButton = {
-        let button = self.titleButton("RESET", highlight: true)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.isHidden = true
-        button.centerX = self.width / 2
-        button.autoresizingMask = [.flexibleBottomMargin, .flexibleRightMargin]
-        return button
-    }()
+//    lazy var resetButton: UIButton = {
+//        let button = self.titleButton("RESET", highlight: true)
+//        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+//        button.isHidden = true
+//        button.centerX = self.width / 2
+//        button.autoresizingMask = [.flexibleBottomMargin, .flexibleRightMargin]
+//        return button
+//    }()
 
     lazy var doneButton: UIButton = {
         let button = self.titleButton("Done", highlight: true)
@@ -46,7 +46,7 @@ class Toolbar: UIView {
 
         addSubview(blurBackgroundView)
         addSubview(cancelButton)
-        addSubview(resetButton)
+        //addSubview(resetButton)
         addSubview(doneButton)
     }
 

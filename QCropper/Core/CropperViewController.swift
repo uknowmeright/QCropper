@@ -159,7 +159,7 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
         let toolbar = Toolbar(frame: CGRect(x: 0, y: 0, width: self.view.width, height: view.safeAreaInsets.bottom + barHeight))
         toolbar.doneButton.addTarget(self, action: #selector(confirmButtonPressed(_:)), for: .touchUpInside)
         toolbar.cancelButton.addTarget(self, action: #selector(cancelButtonPressed(_:)), for: .touchUpInside)
-        toolbar.resetButton.addTarget(self, action: #selector(resetButtonPressed(_:)), for: .touchUpInside)
+        //toolbar.resetButton.addTarget(self, action: #selector(resetButtonPressed(_:)), for: .touchUpInside)
 
         return toolbar
     }()
@@ -483,7 +483,7 @@ open class CropperViewController: UIViewController, Rotatable, StateRestorable, 
 
     func updateButtons() {
         if let toolbar = self.toolbar as? Toolbar {
-            toolbar.resetButton.isHidden = isCurrentlyInDefalutState
+            //toolbar.resetButton.isHidden = isCurrentlyInDefalutState
             if initialState != nil {
                 toolbar.doneButton.isEnabled = !isCurrentlyInInitialState
             } else {
